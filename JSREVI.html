@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- FORM VALIDATION -->
+    <form action="">
+        <input type="text" name="" id="pass">
+        <input type="text" name="" id="cpass">
+        <button onclick="fm()">submit</button>
+    </form>
+
+    <script>
+        function fm(){
+            let pass = document.getElementById("pass");
+        let cpass = document.getElementById("cpass");
+        if(pass.value ===cpass.value){
+            alert("match");
+            return true;
+        }
+        else{
+            alert("not match");
+            return false;
+        }
+
+        } 
+        
+    </script> 
+
+    <br><br> 
+
+    <!-- <!-INPUT TO ONE SHOWING IN OTHER TOO --> 
+
+    <!-- <input type="text" name="" id="inp1" placeholder="enter">
+    <button onclick="ch()">btn</button>
+    <input type="text" name="" id="inp2" value="hello">
+
+    <script>
+        function ch(){
+            let inp1 = document.getElementById("inp1").value;
+            let inp2 = document.getElementById("inp2");
+            let gett = inp2.getAttribute("value");
+            if(gett== "hello"){
+                inp2.setAttribute("value",inp1);
+
+            }
+            else{
+                document.write("error")
+
+            }
+        }
+    </script> -->
+    <br><br>
+    <!-- PROMPT-->
+
+    <!-- <button onclick="pr()"> prompt</button>
+    <span id="span"></span>
+
+    <script>
+        function pr(){
+            let span = document.getElementById("span");
+            let pass;
+            do{
+                pass = prompt("enter valid")
+            }
+            while(pass !== "anushi");
+            span.innerHTML = pass;
+            span.style.color= "blue";
+
+
+        }
+    </script> -->
+
+
+<!-- ARRAY -->
+
+<br><br>
+
+<!-- <b id="arr"></b>
+
+
+<script>
+    const veg = ['TOMATO','POTATO','CABBAGE']
+
+    
+    document.addEventListener("DOMContentLoaded",function(){
+        document.getElementById("arr").textContent = veg;
+
+    })
+    
+</script>
+<br><br>
+<button onclick="push()">push</button>
+<button onclick="pop()">pop</button>
+<button onclick="unshift()">unshift</button>
+<button onclick="shift()">shift</button>
+<button onclick="splice()">splice</button>
+<button onclick="reverse()">reverse</button>
+
+<script>
+
+    function push(){
+        let abc = prompt("enter");
+        veg.push(abc);
+        document.getElementById("arr").innerHTML = veg;
+
+    }
+
+
+    function unshift(){
+        let abc = prompt("enter");
+        veg.unshift(abc);
+        document.getElementById("arr").innerHTML = veg;
+
+    }
+
+    function pop(){
+        
+        veg.pop();
+        document.getElementById("arr").innerHTML = veg;
+
+    }
+
+    function shift(){
+        
+        veg.shift();
+        document.getElementById("arr").innerHTML = veg;
+
+    }
+
+    function reverse(){
+        
+        veg.reverse();
+        document.getElementById("arr").innerHTML = veg;
+
+    }
+
+    function splice(){
+        
+        veg.splice(1,2);
+        document.getElementById("arr").innerHTML = veg;
+
+    }
+
+
+</script> -->
+
+<br><br>
+
+<!-- TOGGLE CONCEPT -->
+
+<!-- <input type="password" name="" id="tog">
+<button onclick="toggle(this)">show pass</button>
+
+<script>
+    function toggle(p){
+        let tog = document.getElementById("tog");
+        let type = tog.getAttribute("type");
+        if(type === "password"){
+            tog.setAttribute("type","text");
+            p.innerHTML = "hide pass"
+        }
+        else{
+            tog.setAttribute("type","password");
+            p.textContent = "show pass"
+        }
+    }
+</script> -->
+
+<!-- BOX ANIMATION MANUPULATION -->
+<br><br>
+
+<div id="box"></div>
+
+<style>
+    #box{
+        height: 70px;
+        width: 80px;
+        background-color: yellowgreen;
+    }
+</style>
+
+<script>
+    let bx = document.getElementById("box");
+    bx.onmouseleave = a;
+    bx.onmouseenter = b;
+
+    function a(){
+        bx.style.background = "blue";
+        bx.style.width = "160px";
+        bx.style.transition = "10s";
+
+    }
+
+    function b(){
+
+        bx.style.width = "80px";
+        bx.style.backgroundColor= "yellowgreen";
+    }
+</script> 
+
+<br><br>
+
+<!-- BULB -->
+<button onclick="bulb()">bulb</button>
+
+<script>
+    function bulb(){
+        window.location ="bulb.html"
+    }
+</script>
+
+<br><br>
+
+
+<!-- GET ATTTRI OR TEXT MOVING-->
+<span id="move" class= "back">hello</span> <br>
+<button onclick="change()">click</button>
+
+<style>
+    .motion{
+        text-decoration: overline;
+        font-style: italic;
+        color: aqua;
+        font-size: 40px;
+        margin-left: 30%;
+        transition: 15s;
+    }
+    .back{
+       
+        color: blueviolet;
+        font-size: medium;
+        font-style: oblique;
+    }
+</style>
+<script>
+    function change(){
+        let move = document.getElementById("move");
+        let id = move.getAttribute("class");
+        if(id === "back"){
+            move.setAttribute("class","motion")
+
+        }
+    }
+
+</script> 
+
+
+<!-- CONTENT IN BOX -->
+
+<input type="text" name="" id="input" onkeyup="te()"><br><br>
+<div id="content"></div>
+
+<style>
+    #content{
+        height: 50px;
+        width: 180px;
+        background-color: aqua;
+        color: #ad0c27;
+        overflow: scroll;
+
+    }
+</style>
+<script>
+    function te(){
+        let id = document.getElementById("input");
+        let box =  document.getElementById("content")
+        box.innerHTML = input.value;
+    }
+</script>
+
+<!-- TO DO LIST -->
+
+<h2><b>TO DO LIST</b></h2>
+<input type="text" name="" id="inpt" >
+<button onclick="hr()">add</button> 
+<button onclick="rm()">remove</button><br>
+<ul id="task"></ul>
+
+<script>
+    function hr(){
+        let inpt = document.getElementById("inpt");
+        let task = document.getElementById("task");
+        let li = document.createElement("li");
+        if(li.textContent = inpt.value){
+            task.append(li);
+            inpt.value = "";
+
+        }
+}
+
+function rm(){
+    let inpt = document.getElementById("inpt");
+    let task = document.getElementById("task");
+    let de;
+    do{
+        de = prompt ("to remove")
+
+    }
+    while(de !== "cook")
+    task.textContent = " ";
+    
+    
+}
+</script>
+
+
+
+</body>
+</html>

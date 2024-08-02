@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<!-- PRACTICE QUES JS  -->
+<body>
+
+<!-- Q1 AREA OF CIRCLE BY RADIUS BY USER -->
+
+<!-- <script>
+    let radius = Number(prompt("enter num"))
+    let area = 2 * 3.14 * radius
+    document.write( "circle Area is "+ area )
+</script>
+
+<br> -->
+<!-- ARRAY SQUARE ROOT  -->
+<!-- 
+<script>
+let array = prompt("enter")
+    let numbers = array.split(',').map(Number);
+    let square = numbers.map(num => num * num)
+    document.write( "array is " + square.join(','))
+</script>
+    
+
+<br> -->
+
+<!-- ARRAY SEPARATING POSITIVE NEGATIVE -->
+<!-- <script>
+
+    let input = prompt("Enter integers");
+    let intArray = input.split(',').map(Number); // Split the string and convert each element to a number
+
+    let negative = intArray.filter(num => num < 0);
+    let positive = intArray.filter(num => num > 0);
+
+    document.write("Negative numbers: " + negative.join(', ') + "<br>");
+    document.write("Positive numbers: " + positive.join(', ') + "<br>");
+
+
+
+</script> -->
+
+<!-- ARRAY SEPARATE ODD EVEN -->
+
+<!-- <script>
+    let value = prompt("enter digit");
+    let separate = value.split(',').map(Number);
+
+    let odd = separate.filter(num => num % 2 != 0)
+    let even = separate.filter(num => num%2 == 0);
+
+    document.write("odd numbers:" + odd.join(',') + "<br>")
+    document.write("even numbers:" + even.join(',')) 
+</script> -->
+
+
+
+<!-- LARGEST OF NUMBER IN ARRAY -->
+
+<script>
+    let larger = prompt("enter list");
+    let newlarge = larger.split(',').map(Number);
+
+    let newvalue = Math.max(...newlarge);
+    document.write("larger no is:" + newvalue)
+
+
+</script>
+<br>
+<!-- DESCENDING ORDER -->
+
+<script>
+    let order = prompt("enter order");
+    let desc = order.split(',').map(Number);
+
+
+    for(let i = 0; i<desc.length; i++){
+        for (let j = 0; j<desc.length -1 ;j++){
+            if (desc[j]< desc [j+1])
+            {
+                let neworder = desc[j];
+                desc[j] = desc[j+1];
+                desc[j+1] = neworder;
+            }
+
+        }
+    }
+
+    document.write("Numbers in descending order: " + desc.join(', '));
+
+</script>
+
+
+</body>
+</html>

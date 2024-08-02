@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+    <!-- TOGGLE HIDE SHOW PASSWORD CONCEPT -->
+
+<input type="password" name="" id="inp"> 
+<span id="span"></span><br>
+ 
+<button onclick="toggle(this)">show password</button>
+<br><br>
+
+<script>
+    function toggle(p){
+        let inp = document.getElementById("inp");
+        let type = inp.getAttribute("type");
+
+        if(type === "password"){
+            inp.setAttribute("type","text");
+            p.innerHTML = "hide password"
+        }
+
+        else{
+            inp.setAttribute("type","password");
+            p.innerHTML = "show password"
+
+        }
+    }
+</script>
+ 
+<!-- LINKING ONE INPUT TO OTHER GIVING COMMENT IF BLANK -->
+
+<button onclick="re()">empty entry</button> <br>
+
+
+<script> 
+
+let inp = document.getElementById("inp");
+inp.addEventListener("input", function (){
+    
+    span.textContent = ""
+})
+    function re(){
+        let inp = document.getElementById("inp");
+        let span = document.getElementById("span");
+        if(inp.value === ""){
+            span.textContent = "enter value"
+            span.style.color = "blue";
+        }
+
+        
+        
+
+
+    }
+</script>
+
+<!-- TABLE INPUT -->
+<br>
+<button onclick="tb()">table of input</button> <br><br>
+
+<script>
+    function tb(){
+        let inp = document.getElementById("inp");
+      for(i=1;i<=10;i++){
+        document.write(i * inp.value);
+        document.write("<br>");  
+        
+
+
+      }
+
+    }
+</script>
+
+<!-- MOVING CAPTION INSIDE THE BOX -->
+
+<div id="box">
+    <h4   id="change" class="title"> WELCOME</h4> 
+</div>
+<br>
+<button onclick="move()" onmouseleave="bo()">moves</button>
+
+<script>
+    function move(){
+        let change = document.getElementById("change");
+        let id = change.getAttribute("class");
+        if(id === 'title'){
+            change.setAttribute("class","ch");
+
+        }
+
+    }
+
+    function bo(){
+        let box = document.getElementById("box");
+        box.style.color = "yellow";
+    }
+</script>
+
+<style>
+    #box{
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+    }
+    .title{
+      
+        color: black; 
+        
+        
+
+    }
+    .ch{
+        
+        color: purple;
+        margin-left: 250px;
+        transition: 10s;
+        text-transform: lowercase;
+        font-size: 80px;
+
+    }
+</style>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <!-- INPUT VALUE TO OTHER INPUT AFTER PRESSING SUBMIT -->
+
+
+    <input type="text" name="" id="input" placeholder="input" >
+        <button id="btn2">submit</button>
+   
+    <input type="text" name="" id="inp2" placeholder="inp" value="hello" >
+
+    <script>
+        
+        document.getElementById("btn2").addEventListener("click",function(){
+            
+            let input = document.getElementById("input").value;
+            let inp2 = document.getElementById("inp2");
+            let gett = inp2.getAttribute("value");
+            if(gett == "hello"){
+                inp2.setAttribute("value",input);
+
+            }else{
+                document.write("error");
+            }
+                
+               
+
+        })
+       
+           
+            
+           
+            
+
+            
+        
+        
+    </script>
+
+
+<!-- COUNT USING ARROW FUNCTION -->
+<br><br>
+<button onclick="c()">submit</button>
+<script>
+    let count = 0;
+  
+
+    const c = ()=>{
+        count ++;
+        if(count === 1){
+            alert("this is count 1")
+        }else if(count === 2){
+            prompt("done count 2")
+        }else{
+         
+            document.write("count 3")
+
+        }
+    }
+</script>
+
+
+
+
+</body>
+</html>

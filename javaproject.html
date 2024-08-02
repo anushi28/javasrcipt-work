@@ -1,0 +1,430 @@
+
+
+<!-- JAVA ALL CONCEPT  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- AUTOMATIC REFRESH THE PAGE -->
+
+<body onload="ch(5000)">
+
+<script>
+    // function ch(g){
+    //     setTimeout("location.reload(true);", g)
+    // }
+</script>
+
+    <!-- INPUT VALUE TO OTHER INPUT AFTER PRESSING SUBMIT -->
+
+    <br><br>
+
+
+        <input type="text" name="" id="input" placeholder="input" >
+        <button id="btn2">submit</button>
+   
+    <input type="text" name="" id="inp2" placeholder="inp" value="hello" >
+
+    <script>
+        
+        document.getElementById("btn2").addEventListener("click",function(){
+            
+            let input = document.getElementById("input").value;
+            let inp2 = document.getElementById("inp2");
+            let gett = inp2.getAttribute("value");
+            if(gett == "hello"){
+                inp2.setAttribute("value",input);
+
+            }else{
+                document.write("error");
+            }
+                
+               
+
+        })      
+              
+    </script>
+
+   
+    
+
+
+
+<!-- PROMPT -->
+<br><br>
+<button onclick="pr()">prompt</button> 
+<span id="span"></span> <br> <br>
+
+
+<script>
+    function pr(){
+        
+        let span = document.getElementById("span");
+        let pass;
+    do{ 
+        pass = prompt("plz enter valid id ")
+    }
+    while(pass !== "anushi")
+    span.textContent = pass;
+    span.style.color = "blue";
+
+
+
+    }
+
+</script>
+
+
+
+<!-- CONFIRM -->
+
+<button onclick="cn()">confirm</button>
+
+
+<script>
+    function cn(){
+        
+        
+       
+        let pass = confirm("I'm Adult");
+        if(pass == true){
+            window.location = "https://classroom.google.com/u/0/h"
+        }
+        else{
+            window.location = "https://www.youtube.com/"
+        }
+       
+        
+
+
+    }
+</script>
+
+
+<!-- ADDEVENTLISTNER -->
+
+
+<!-- CLICK USE -->
+
+<form action="">
+    <input type="text">
+    <button id="stop">submit</button> <br><br>
+
+</form>
+<script>
+    document.getElementById("stop").addEventListener("click",function (m){
+        m.preventDefault();
+    })
+</script>
+
+
+
+<!-- DOMcontentloaded USE --> 
+
+<b id="text"></b> <br>
+
+<script>
+    const color = ['pink','red','blue']
+
+    document.addEventListener("DOMContentLoaded",function(){
+    document.getElementById("text").innerHTML = color;
+})
+</script>
+
+
+<!--FORM VALIDATION  -->
+
+<br><br>
+<form action="" onsubmit="return cd()">
+    <input type="text" id="pass">
+    <input type="text" name="" id="cpass">
+   <button onclick="cd()">alert</button>
+
+</form>
+
+<script>
+    function cd(){
+        let pass = document.getElementById("pass");
+        let cpass = document.getElementById("cpass");
+        if(pass.value===cpass.value){
+            alert("match");
+            return true;
+        }
+        else {
+            alert("not match");
+            return false;
+        }
+        
+    }
+</script>
+
+
+
+<!-- PRINTING PAGE -->
+
+<br><br>
+
+<button onclick="pg()">print</button> <br><br> 
+<script>
+    function pg(){
+        window.print();
+    }
+</script>
+
+
+
+<!-- ARRAY FUNCTIONS -->
+
+<button onclick="pop()">pop</button><br><br>
+    <button onclick="push()">push</button><br><br>
+    <button onclick="shift()">shift</button><br><br>
+    <button onclick="unshift()">unshift</button><br><br>
+    <button onclick="reverse()">reverse</button><br><br>
+    <button onclick="splice()">splice</button><br><br>
+    
+
+
+
+<script>
+    // POP USING BUTTON
+function pop(){
+    color.pop();
+    document.getElementById("text").innerHTML = color;
+
+}
+// PUSH USING BUTTON
+function push(){
+    let element = prompt("enter value");
+    color.push(element);
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+// SHIFT USING BUTTON
+function shift(){
+    color.shift();
+    document.getElementById("text").innerHTML = color;
+
+}
+
+// UNSHIFT USING BUTTON
+function unshift(){
+    let element = prompt("enter value");
+    color.unshift(element);
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+// REVERSE USING BUTTON
+
+function reverse(){
+    color.reverse();
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+// SPLICE USING BUTTON
+
+function splice(){
+
+    color.splice(1,3);
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+
+</script>
+
+
+<!-- on off bulb -->
+
+<button onclick="bulb()">bulb</button>
+<script>
+    function bulb(){
+        window.location = "bulb.html"
+    }
+</script>
+
+
+
+<!-- TOGGLE HIDE SHOW PASSWORD CONCEPT -->
+<br><br>
+<input type="password" name="" id="int"> 
+<span id="span"></span><br>
+
+<button onclick="toggle(this)">show password</button>
+<br><br>
+
+<script>
+    function toggle(p){
+        let int = document.getElementById("int");
+        let type = int.getAttribute("type");
+
+        if(type === "password"){
+            int.setAttribute("type","text");
+            p.innerHTML = "hide password"
+        }
+
+        else{
+            int.setAttribute("type","password");
+            p.innerHTML = "show password"
+
+        }
+    }
+</script>
+
+
+<!-- ANIMATION ND MANIPULATION -->
+<br>
+<div id="box"></div>
+
+<style>
+    #box{
+        height: 150px;
+        width: 200px;
+        background-color: blue;
+    }
+</style>
+
+<script>
+    let box = document.getElementById("box");
+
+    box.onmouseleave=a;
+    
+    box.onmouseenter=c;
+    function a(){
+        box.style.background="red";
+        box.style.boxShadow="5px 2px 2px 1px yellow";
+        box.style.width ="500px"
+        box.style.transition="3s";
+    }
+
+    function c(){
+        box.style.background="black";
+        box.style.width = "200px";
+        box.style.boxShadow="none";
+        
+    }
+
+
+</script>
+
+
+
+
+<!-- GET ATTRIBUTE -->
+<br><br>
+<h3 id="color" class="red">hello </h3>
+<button onclick="se()">click to change</button>
+
+<style>
+    .red{
+        color: red;
+    }
+
+    .blue{
+        color:blue;
+        font-size: 40px;
+        margin-left: 30%;
+        transition: 15s;
+
+    }
+</style>
+
+<script>
+    function se(){
+        let color = document.getElementById("color");
+        let id = color.getAttribute("class");
+        if(id === 'red'){
+            color.setAttribute("class","blue");
+
+        }
+        
+    }
+</script>
+
+
+<!-- CLICK COUNT ADDEVENTLISTNER -->
+<br>
+<body id="body" class="img">
+    <a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_7hz2t19t5c_e&adgrpid=58355126069&hvpone=&hvptwo=&hvadid=610644601173&hvpos=&hvnetw=g&hvrand=3346723359711202029&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061690&hvtargid=kwd-10573980&hydadcr=14453_2316415" id="anc">click me</a>
+    <br><br>
+
+
+<style>
+    
+    .bg{
+        background-image: url(https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80);
+    }
+
+    
+</style>
+<br>
+
+
+<script>
+    let anc = document.getElementById("anc");
+    let body = document.getElementById("body");
+    let id = body.getAttribute("class");
+    let span = document.getElementById("span");
+    
+
+    let count = 0;
+    anc.addEventListener("click", function(t){
+        count++;
+        if(count === 1){
+            t.preventDefault()
+        }
+        else if (count === 2){
+            t.preventDefault()
+            do{ 
+        pass = prompt("plz enter valid id ")
+    }
+    while(pass !== "anushi")
+    
+            
+        }
+
+        else if (count === 3){
+            
+            body.setAttribute("class","bg");
+
+        }
+        else if (count ===4){
+            t.preventDefault()
+            // window.location ="grow&shinepg.html";
+        }
+        else if(count===5){
+            window.location ="grow&shinepg.html";
+        
+
+        }
+            
+    })
+
+</script>
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+</body>
+</html>

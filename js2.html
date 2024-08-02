@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body" class="img">
+    <a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_7hz2t19t5c_e&adgrpid=58355126069&hvpone=&hvptwo=&hvadid=610644601173&hvpos=&hvnetw=g&hvrand=3346723359711202029&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061690&hvtargid=kwd-10573980&hydadcr=14453_2316415" id="anc">click me</a>
+    <br><br>
+
+    <button onclick="p()">print</button><br>
+
+    <h1 id="text"></h1><br>
+
+    <button onclick="pop()">pop</button><br><br>
+    <button onclick="push()">push</button><br><br>
+    <button onclick="shift()">shift</button><br><br>
+    <button onclick="unshift()">unshift</button><br><br>
+    <button onclick="reverse()">reverse</button><br><br>
+    <button onclick="splice()">splice</button><br><br>
+    <button onclick="even()">even</button><br><br>
+    <button onclick="odd()">odd</button><br><br>
+    
+
+    
+
+<style>
+    
+    .bg{
+        background-image: url(https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80);
+    }
+
+    
+</style>
+
+<script>
+    let anc = document.getElementById("anc");
+    let body = document.getElementById("body");
+    let id = body.getAttribute("class");
+    let span = document.getElementById("span");
+    
+
+    let count = 0;
+    anc.addEventListener("click", function(t){
+        count++;
+        if(count === 1){
+            t.preventDefault()
+        }
+        else if (count === 2){
+            t.preventDefault()
+            do{ 
+        pass = prompt("plz enter valid id ")
+    }
+    while(pass !== "anushi")
+    
+            
+        }
+
+        else if (count === 3){
+            t.preventDefault()
+            body.setAttribute("class","bg");
+
+        }
+        else if (count ===4){
+            t.preventDefault()
+            // window.location ="grow&shinepg.html";
+        }
+        else if(count===5){
+
+        }
+            
+    })
+
+
+
+    // ARRAY FUNCTION
+
+
+    // PUSH 
+
+    const fruit = ['apple','orange','banana']
+    fruit.push("grape");
+    document.write(fruit + "<br>" + "<br>");
+
+    // UNSHIFT
+
+    const color = ['pink','red','blue']
+    color.unshift("yellow");
+    document.write(color + "<br>" + "<br>");
+
+    // SHIFT
+    const pen = ['ball','gel','blue']
+    pen.shift("");
+    document.write(pen + "<br>" + "<br>");
+
+
+    // CONCAT
+    const array1 = ['abc','def','ghi']
+    const array2 = ['hkhc','jki','pod']
+    const array3 =['hiuf','kls','fjd']
+     let abc=array1.concat[array2 + array3]
+    document.write(abc);
+
+
+   
+
+
+
+
+
+    
+
+// WRITE TEXT DIRECTLY 
+document.addEventListener("DOMContentLoaded",function(){
+    document.getElementById("text").innerHTML = color;
+})
+
+// POP USING BUTTON
+function pop(){
+    color.pop();
+    document.getElementById("text").innerHTML = color;
+
+}
+// PUSH USING BUTTON
+function push(){
+    let element = prompt("enter value");
+    color.push(element);
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+// SHIFT USING BUTTON
+function shift(){
+    color.shift();
+    document.getElementById("text").innerHTML = color;
+
+}
+
+// UNSHIFT USING BUTTON
+function unshift(){
+    let element = prompt("enter value");
+    color.unshift(element);
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+// REVERSE USING BUTTON
+
+function reverse(){
+    color.reverse();
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+// SPLICE USING BUTTON
+
+function splice(){
+
+    color.splice(1,3);
+    document.getElementById("text").innerHTML = color;
+
+
+}
+
+
+// FIND FUNCTION USE
+
+const num =[1,2,3,4,5,6,2,4,5,6,8,9,1,3,4,5,6,2,4,5,6,3,8]; 
+document.write("<br>")
+document.write(num);
+document.write("<br>")
+num.find((element)=>{
+    if(element<5){
+        document.write(element)
+    }
+})
+
+
+
+
+function even(){
+    let even = document.getElementById("even");
+
+    
+      for(i=0;i<=33;i++){
+       if(i%2==0){
+        document.write(i);
+
+        document.write("<br>");  
+       }
+          
+
+      }
+}
+
+
+
+function odd(){
+    let odd = document.getElementById("odd");
+
+    
+      for(i=0;i<=30;i++){
+       if(i%2!=0){
+        document.write(i);
+
+        document.write("<br>");  
+       }
+          
+
+      }
+}
+
+  
+   
+
+    
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

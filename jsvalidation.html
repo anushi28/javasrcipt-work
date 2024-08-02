@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="object.js"></script>
+</head>
+
+<!-- AUTOMATIC REFRESH THE PAGE -->
+
+<!-- <body onload="ch(15000)">
+
+<script>
+    function ch(g){
+        setTimeout("location.reload(true);", g)
+    }
+</script> -->
+
+<!-- PRINTING PAGE -->
+
+<br><br>
+
+<button onclick="pg()">print</button> <br><br> 
+<script>
+    function pg(){
+        window.print();
+    }
+</script>
+
+
+<!-- FORM SUBMIT STOP  -->
+
+<form action="">
+    NAME : <input type="text" required><br>
+     EMAIL : <input type="email" required><br>
+     PASSWORD: <input type="password" required><br>
+
+   GENDER: <input type="radio" name="gender" value="male">MALE</input>
+ <input type="radio" name="gender" value="female">FEMALE <br>
+    <button id="stop">submit</button> <br><br>
+
+</form>
+<script>
+    document.getElementById("stop").addEventListener("click",function (m){
+        m.preventDefault();
+    })
+</script>
+
+
+<!-- NEW PAGE WRITING -->
+<button onclick="qr('anushi','7')">get details</button>
+<script>
+    function qr(name,age){
+        document.write(name + " is "+ age + "old");
+    }
+</script>
+
+
+   
+
+
+
+
+
+
+
+<br><br>
+
+<!-- BLANK ENTRY -->
+<input type="text" name="" id="blank">
+<button onclick="mn()">done</button>
+
+<script>
+    function mn(){
+        let blank = document.getElementById("blank");
+        if(blank.value === ""){
+            alert("plz enter some value")
+        }
+    }
+</script>
+
+
+<br><br>
+
+
+
+<!-- BOX  -->
+<div id="box">
+
+</div>
+
+<h3 id="title">WELCOME</h3>
+<br>
+
+
+
+
+ <!--PROMPT FUNCTION USED  -->
+
+<button onclick="pr()">submit</button> 
+<span id="span"></span>
+
+
+<script>
+    function pr(){
+        
+        let span = document.getElementById("span");
+        let pass;
+    do{ 
+        pass = prompt("plz enter valid id ")
+    }
+    while(pass !== "anushi")
+    span.innerHTML = pass;
+
+
+    }
+    
+    
+
+
+</script>
+ 
+
+
+
+
+
+
+
+<br>
+<!-- FORM  PASSWORD CHECK-->
+<form action="" onsubmit="return cd()">
+    <input type="text" id="pass">
+    <input type="text" name="" id="cpass">
+   <button onclick="cd()">check </button>
+
+</form>
+
+<script>
+    function cd(){
+        let pass = document.getElementById("pass");
+        let cpass = document.getElementById("cpass");
+        if(pass.value===cpass.value){
+            alert("match");
+            return true;
+        }
+        else {
+            alert("not match");
+            return false;
+        }
+        
+    }
+</script>
+
+
+<!-- COLOR CHANGE THROUGH BUTTON CLICK -->
+<br><br>
+<h3 id="color" class="red">hello </h3>
+<br>
+<button onmouseenter="kl()" onmouseleave="jk()">change</button> <br><br>
+
+<script>
+    function kl(){
+        let color = document.getElementById("color");
+        color.style.color = "blue";
+    
+    }
+
+    function jk(){
+        let color = document.getElementById("color");
+        color.style.color = "red";
+    }
+</script>
+
+<br>
+
+
+<!-- MOVING WORD FORWARD AND CHANGING COLOR -->
+<button onclick="se()">click to change</button>
+
+<style>
+    .red{
+        color: red;
+    }
+
+    .blue{
+        color:blue;
+        font-size: 40px;
+        margin-left: 30%;
+        transition: 15s;
+
+    }
+</style>
+
+<script>
+    function se(){
+        let color = document.getElementById("color");
+        let id = color.getAttribute("class");
+        if(id === 'red'){
+            color.setAttribute("class","blue");
+
+        }
+        
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- INPUT  CONTENT IN BOX -->
+
+<br><br>
+
+<input type="text" name="" id="input" onkeyup="ab()">
+<div id="box1">
+    <br><br>
+</div>
+<script>
+    function ab(){
+        let box = document.getElementById("box1");
+        let input = document.getElementById("input");
+        box.innerHTML = input.value;
+    }
+</script>
+<style>
+    #box1{
+        height: 40px;
+        width: 300px;
+        margin-top: 50px;
+        margin-left: 400px;
+        background-color: black;
+        color: white;
+       overflow: scroll;
+    }
+</style>
+ 
+
+
+
+
+    
+</body>
+<style>
+    #box{
+        height: 150px;
+        width: 150px;
+        background-color: black;
+    }
+</style>
+<script>
+     
+
+    // let input = document.getElementById("form");
+    // input.addEventListener("submit",function(e){
+    //     e.preventDefault();
+    // })
+    
+
+
+
+
+    // BOX SCRIPT
+    let box = document.getElementById("box");
+    let title = document.getElementById("title")
+    title.onmouseleave=b;
+    title.onmouseenter=d;
+    box.onmouseleave=a;
+    
+    box.onmouseenter=c;
+    function a(){
+        box.style.background="red";
+        box.style.boxShadow="5px 2px 2px 1px green";
+        box.style.width ="200px"
+        box.style.transition="5s";
+    }
+    function b(){
+        title.style.color="blue"
+        title.style.fontSize="75px"
+        title.style.transition="3s"
+
+    }
+    function d(){
+        title.style.color="black";
+        
+
+    }
+    
+  
+    
+    function c(){
+        box.style.background="black";
+        
+    }
+
+
+
+
+
+
+   
+
+
+</script>
+
+
+
+<!-- CLICK COUNT ADDEVENTLISTNER -->
+
+<a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_7hz2t19t5c_e&adgrpid=58355126069&hvpone=&hvptwo=&hvadid=610644601173&hvpos=&hvnetw=g&hvrand=3346723359711202029&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061690&hvtargid=kwd-10573980&hydadcr=14453_2316415" id="anc">click me</a>
+    <br><br>
+
+
+
+
+
+
+</html>
